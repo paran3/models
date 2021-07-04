@@ -1,3 +1,5 @@
+# download.py from https://github.com/DantesLegacy/TensorFlow_AudioSet_Example.git
+
 import contextlib
 import os
 import csv
@@ -9,10 +11,11 @@ filename = 'eval_segments.csv'
 row_num = 0
 path = 'audioset/eval/'
 label_util = LabelUtil()
-download_list = ['Howl', 'Horse', 'Pig', 'Goat', 'Sheep', 'Fowl', 'Turkey', 'Mouse', 'Frog', 'Owl', 'Bird', 'Squawk',
-                 'Animal', 'Meow', 'Chicken, rooster', 'Gobble', 'Livestock, farm animals, working animals',
-                 'Wild animals', 'Roar', 'Snake', 'Mosquito', 'Buzz', 'Insect', 'Purr', 'Dock', 'Oink', 'Bleat',
-                 'Goose', 'Moo', 'Mouse', 'Hoot', 'Croak', 'Hiss', 'Yip', 'Bark']
+# download_list = ['Howl', 'Horse', 'Pig', 'Goat', 'Sheep', 'Fowl', 'Turkey', 'Mouse', 'Frog', 'Owl', 'Bird', 'Squawk',
+#                  'Animal', 'Meow', 'Chicken, rooster', 'Gobble', 'Livestock, farm animals, working animals',
+#                  'Wild animals', 'Roar', 'Snake', 'Mosquito', 'Buzz', 'Insect', 'Purr', 'Duck', 'Oink', 'Bleat',
+#                  'Goose', 'Moo', 'Mouse', 'Hoot', 'Croak', 'Hiss', 'Yip', 'Bark']
+download_list = ['Bleat']
 download_label_list = label_util.get_codes(download_list)
 last_processed_row = 0
 
@@ -57,6 +60,7 @@ def youtube_downloader(id, start_time, idx):
 def check_dir(path):
     if not os.path.isdir(path):
         os.makedirs(path)
+    if not os.path.isdir(path+'error/'):
         os.makedirs(path + 'error/')
 
 

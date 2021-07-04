@@ -24,7 +24,9 @@ class LabelUtil:
     def get_code_names(self, codes):
         names = []
         for code in codes:
-            names.append(self.label_code_to_name.get(code))
+            name = self.label_code_to_name.get(code)
+            if name is not None:
+                names.append(name)
 
         return names
 
@@ -34,7 +36,9 @@ class LabelUtil:
     def get_codes(self, names):
         codes = []
         for name in names:
-            codes.append(self.label_name_to_code.get(name))
+            code = self.label_name_to_code.get(name)
+            if code is not None:
+                codes.append(code)
 
         return codes
 

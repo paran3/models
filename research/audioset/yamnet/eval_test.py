@@ -23,7 +23,7 @@ rate_count = dict()
 
 label_list = ['Howl', 'Horse', 'Pig', 'Goat', 'Sheep', 'Fowl', 'Turkey', 'Mouse', 'Frog', 'Owl', 'Bird', 'Squawk',
               'Animal', 'Meow', 'Chicken, rooster', 'Gobble', 'Wild animals', 'Roar', 'Snake', 'Mosquito', 'Buzz',
-              'Insect', 'Purr', 'Dock', 'Oink', 'Bleat', 'Goose', 'Moo', 'Mouse', 'Hoot', 'Croak', 'Hiss', 'Yip', 'Bark']
+              'Insect', 'Purr', 'Duck', 'Oink', 'Bleat', 'Goose', 'Moo', 'Mouse', 'Hoot', 'Croak', 'Hiss', 'Yip', 'Bark']
 
 
 def main(label_names, video_list_size=5):
@@ -38,62 +38,67 @@ def main(label_names, video_list_size=5):
     yamnet_classes = yamnet_model.class_names('yamnet_class_map.csv')
 
     for label in labels:
-        label_name = label_util.get_code_name(label)
-        print('label : ' + label_name)
-        videos = get_videos(label, video_list_size)
-        count = 0
-        total = len(videos)
-        exist_total = 0
+        if label_util.get_code_name(label) is not None:
+            label_name = label_util.get_code_name(label)
+            print('label : ' + label_name)
+            videos = get_videos(label, video_list_size)
+            count = 0
+            total = len(videos)
+            exist_total = 0
 
-        for video in videos:
-            video_id = video[0]
-            video_labels = video[1]
-            video_path = path + video_id + '.wav'
-            print(video_path)
+            for video in videos:
+                video_id = video[0]
+                video_labels = video[1]
+                video_path = path + video_id + '.wav'
+                print(video_path)
 
-            if os.path.isfile(video_path):
-                # Decode the WAV file.
-                wav_data, sr = sf.read(video_path, dtype=np.int16)
-                assert wav_data.dtype == np.int16, 'Bad sample type: %r' % wav_data.dtype
-                waveform = wav_data / 32768.0  # Convert to [-1.0, +1.0]
-                waveform = waveform.astype('float32')
+                if os.path.isfile(video_path):
+                    # Decode the WAV file.
+                    wav_data, sr = sf.read(video_path, dtype=np.int16)
+                    assert wav_data.dtype == np.int16, 'Bad sample type: %r' % wav_data.dtype
+                    waveform = wav_data / 32768.0  # Convert to [-1.0, +1.0]
+                    waveform = waveform.astype('float32')
 
-                # Convert to mono and the sample rate expected by YAMNet.
-                if len(waveform.shape) > 1:
-                    waveform = np.mean(waveform, axis=1)
-                if sr != params.sample_rate:
-                    waveform = resampy.resample(waveform, sr, params.sample_rate)
+                    # Convert to mono and the sample rate expected by YAMNet.
+                    if len(waveform.shape) > 1:
+                        waveform = np.mean(waveform, axis=1)
+                    if sr != params.sample_rate:
+                        waveform = resampy.resample(waveform, sr, params.sample_rate)
 
-                # Predict YAMNet classes.
-                scores, embeddings, spectrogram = yamnet(waveform)
-                # Scores is a matrix of (time_frames, num_classes) classifier scores.
-                # Average them along time to get an overall classifier output for the clip.
-                prediction = np.mean(scores, axis=0)
-                # Report the highest-scoring classes and their scores.
-                top5_i = np.argsort(prediction)[::-1][:5]
-                print(video_id, ':\n' +
-                      '\n'.join('  {:12s}: {:.3f}'.format(yamnet_classes[i], prediction[i])
-                                for i in top5_i))
+                    # Predict YAMNet classes.
+                    scores, embeddings, spectrogram = yamnet(waveform)
+                    # Scores is a matrix of (time_frames, num_classes) classifier scores.
+                    # Average them along time to get an overall classifier output for the clip.
+                    prediction = np.mean(scores, axis=0)
+                    # Report the highest-scoring classes and their scores.
+                    top5_i = np.argsort(prediction)[::-1][:5]
+                    print(video_id, ':\n' +
+                          '\n'.join('  {:12s}: {:.3f}'.format(yamnet_classes[i], prediction[i])
+                                    for i in top5_i))
 
-                exist_total += 1
-                top5_index = []
-                for i in top5_i:
-                    if label_name == yamnet_classes[i]:
-                        count += 1
-                    top5_index.append(i)
+                    exist_total += 1
+                    top5_index = []
+                    for i in top5_i:
+                        if label_name == yamnet_classes[i]:
+                            count += 1
+                        top5_index.append(i)
 
-                video_logger.writerow([video_id,
-                                       label_util.get_code_names(video_labels.split(',')),
-                                       yamnet_classes[top5_index[0]], prediction[top5_index[0]],
-                                       yamnet_classes[top5_index[1]], prediction[top5_index[1]],
-                                       yamnet_classes[top5_index[2]], prediction[top5_index[2]],
-                                       yamnet_classes[top5_index[3]], prediction[top5_index[3]],
-                                       yamnet_classes[top5_index[4]], prediction[top5_index[4]],
-                                       ])
+                    video_logger.writerow([video_id,
+                                           label_util.get_code_names(video_labels.split(',')),
+                                           yamnet_classes[top5_index[0]], prediction[top5_index[0]],
+                                           yamnet_classes[top5_index[1]], prediction[top5_index[1]],
+                                           yamnet_classes[top5_index[2]], prediction[top5_index[2]],
+                                           yamnet_classes[top5_index[3]], prediction[top5_index[3]],
+                                           yamnet_classes[top5_index[4]], prediction[top5_index[4]],
+                                           ])
 
-        rate_count[label_name] = count
-        label_logger.writerow(
-            [label_util.get_code_name(label), total, exist_total, count, round(count / exist_total, 3)])
+            rate_count[label_name] = count
+
+            rate = 0.000
+            if exist_total > 0:
+                rate = round(count / exist_total, 3)
+            label_logger.writerow(
+                [label_util.get_code_name(label), total, exist_total, count, rate])
 
     print(rate_count)
 
