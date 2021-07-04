@@ -1,0 +1,10 @@
+label,total,exist_total,count,rate
+Dog,100,22,17,0.773
+Cat,100,48,39,0.812
+"Chicken, rooster",100,79,57,0.722
+Gobble,100,95,43,0.453
+Roar,100,84,62,0.738
+Snake,100,65,20,0.308
+Bird,100,94,49,0.521
+Sheep,100,91,43,0.473
+Turkey,100,98,58,0.592

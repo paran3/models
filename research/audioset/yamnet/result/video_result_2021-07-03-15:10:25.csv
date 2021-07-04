@@ -1,0 +1,48 @@
+video_id,labels,top1,top1_rate,top2,top2_rate,top3,top3_rate,top4,top4_rate,top5,top5_rate
+3IdazIWh2Ew,['Howl'],Howl,0.4052721,Animal,0.40454292,"Domestic animals, pets",0.39778,Dog,0.39681178,"Canidae, dogs, wolves",0.22513497
+Yx396qvohX8,"['Canidae, dogs, wolves', 'Bark', 'Domestic animals, pets', 'Howl', 'Bow-wow', 'Dog', 'Animal']",Dog,0.9081542,"Domestic animals, pets",0.9066831,Animal,0.8952676,Howl,0.60033846,"Canidae, dogs, wolves",0.39799663
+NF1lwZ24RYI,"['Canidae, dogs, wolves', 'Bark', 'Domestic animals, pets', 'Howl', 'Bow-wow', 'Dog', 'Growling', 'Animal']","Domestic animals, pets",0.90244406,Dog,0.8946444,Animal,0.8881528,Howl,0.51237845,"Canidae, dogs, wolves",0.37390882
+0F04c_rY4aw,['Howl'],Dog,0.549076,"Domestic animals, pets",0.54248583,Animal,0.5111344,Howl,0.42631078,"Canidae, dogs, wolves",0.3023305
+kQQrsmLvoCE,"['Canidae, dogs, wolves', 'Music', 'Domestic animals, pets', 'Howl', 'Yip', 'Dog', 'Animal', 'Inside, small room']",Music,0.57834756,"Domestic animals, pets",0.13784413,Animal,0.13782254,Dog,0.13562985,Howl,0.08719674
+Mtkhv22SoZ8,"['Horse', 'Neigh, whinny', 'Animal']",Silence,0.31158212,"Livestock, farm animals, working animals",0.3077914,Animal,0.2909885,Horse,0.26589638,"Neigh, whinny",0.23674631
+ALNk7_3zj68,"['Theme music', 'Horse', 'Music', 'Speech', 'Animal']",Music,0.88184464,Brass instrument,0.053555824,Orchestra,0.037971765,Trombone,0.0376046,Jazz,0.032999426
+JqfJ5xfAMbE,"['Horse', 'Music', 'Clip-clop', 'Speech']",Music,0.68012273,Bagpipes,0.08646755,Musical instrument,0.03649008,Traditional music,0.03259422,Folk music,0.03012597
+hEWlxtiO6Sw,"['Horse', 'Clip-clop', 'Livestock, farm animals, working animals', 'Animal']","Outside, rural or natural",0.18740879,Wind,0.18098938,Rustling leaves,0.17675307,Animal,0.10115365,Wind noise (microphone),0.07927126
+Flusa6-SaDM,"['Horse', 'Clip-clop', 'Speech', 'Livestock, farm animals, working animals', 'Animal']",Speech,0.48548275,Animal,0.08026568,Vehicle,0.04533886,Clip-clop,0.041214075,Skateboard,0.038364522
+QNATmv1gQBU,"['Pig', 'Animal']",Animal,0.3712109,Wild animals,0.13430576,Bird,0.13410828,"Outside, rural or natural",0.10326783,"Domestic animals, pets",0.08994572
+rLhXPcqUK8A,"['Pig', 'Snort', 'Groan']","Wail, moan",0.18357553,Groan,0.17244613,"Crying, sobbing",0.17183392,Whimper,0.14406288,Speech,0.09447952
+6zbsUtQL4nY,"['Pig', 'Snort', 'Animal']","Inside, small room",0.2761018,"Domestic animals, pets",0.08456223,Animal,0.083501145,Dog,0.07016643,Snort,0.0689434
+i0cqbYWpmYU,"['Goat', 'Music', 'Bleat']",Music,0.32468778,Speech,0.21231505,"Livestock, farm animals, working animals",0.16756289,Animal,0.1611937,Bleat,0.1192464
+b8fp8ZcYdG4,"['Goat', 'Sheep', 'Noise', 'Livestock, farm animals, working animals', 'Animal']",Animal,0.6652585,Sheep,0.62196773,"Livestock, farm animals, working animals",0.59233904,Bleat,0.4747594,Goat,0.12153566
+b82OS1AtRio,"['Goat', 'Sheep', 'Rustling leaves', 'Speech', 'Livestock, farm animals, working animals']",Speech,0.2905504,Wind,0.18699214,Wind noise (microphone),0.104922816,Rustling leaves,0.10045083,Ocean,0.10044563
+_ogoy33G6ZE,"['Goat', 'Sheep', 'Animal']","Boat, Water vehicle",0.16142154,Wind,0.1500958,Vehicle,0.1405944,Wind noise (microphone),0.1206283,Animal,0.11447127
+QLEBKY7baBg,"['Goat', 'Sheep', 'Bleat', 'Speech', 'Animal']",Speech,0.21590193,Sheep,0.16874763,"Livestock, farm animals, working animals",0.16064835,"Boat, Water vehicle",0.15282723,Bleat,0.14716636
+3H3261x-QgI,"['Sheep', 'Bleat']",Water,0.1408318,Liquid,0.10480678,"Splash, splatter",0.1017349,Vehicle,0.090448275,Slosh,0.08412049
+Aw43FUCkIb8,"['Screaming', 'Domestic animals, pets', 'Sheep', 'Animal']",Animal,0.18582326,"Livestock, farm animals, working animals",0.17652981,Sheep,0.16526201,Bleat,0.13880524,Wind,0.12125166
+e03gY44qb9g,"['Sheep', 'Bleat', 'Speech']",Speech,0.327364,Animal,0.30471843,"Livestock, farm animals, working animals",0.29547077,Goat,0.24108441,Bleat,0.105672106
+FpSHaK68ch8,"['Music', 'Independent music', 'Song', 'Sheep', 'Bleat']",Music,0.7526286,Christian music,0.035278045,Screaming,0.031175846,Soul music,0.0307732,Groan,0.029882867
+Aw43FUCkIb8,"['Screaming', 'Domestic animals, pets', 'Sheep', 'Animal']",Animal,0.18582326,"Livestock, farm animals, working animals",0.17652981,Sheep,0.16526201,Bleat,0.13880524,Wind,0.12125166
+UBw5ujeODmE,"['Bird', 'Turkey', 'Bird vocalization, bird call, bird song', 'Fowl', 'Chirp, tweet', 'Gobble']",Animal,0.27135476,"Livestock, farm animals, working animals",0.15579352,Fowl,0.14263482,Snake,0.13581653,Turkey,0.10967114
+MVDR9JeJA6o,"['Bird', 'Turkey', 'Bird vocalization, bird call, bird song', 'Fowl', 'Gobble']",Animal,0.46568218,"Domestic animals, pets",0.2182472,Dog,0.1861181,Rustle,0.16988373,Pink noise,0.14701864
+qIVmvxv7Yi8,"['Bird', 'Bird vocalization, bird call, bird song', 'Fowl', 'Chirp, tweet', 'Crowing, cock-a-doodle-doo', 'Cluck', 'Chicken, rooster', 'Livestock, farm animals, working animals']",Animal,0.8201889,"Livestock, farm animals, working animals",0.4785281,Fowl,0.46740294,"Chicken, rooster",0.4264852,Bird,0.37307447
+6QvSd79Ocw8,"['Bird', 'Turkey', 'Bird vocalization, bird call, bird song', 'Fowl', 'Chirp, tweet', 'Gobble']",Animal,0.35677272,Turkey,0.16440555,"Livestock, farm animals, working animals",0.13944884,Wild animals,0.13299388,"Outside, rural or natural",0.13244453
+muQm_S77_E0,"['Turkey', 'Fowl', 'Gobble']",Animal,0.8515147,Turkey,0.84579754,Gobble,0.79302585,"Livestock, farm animals, working animals",0.69279635,Fowl,0.6914023
+JuzqJAPlb5w,"['Turkey', 'Fowl', 'Cluck', 'Gobble', 'Chicken, rooster']",Music,0.3694067,Speech,0.35181534,Turkey,0.103212275,Gobble,0.09816611,Animal,0.094745226
+SYEmTschjRg,"['Turkey', 'Fowl', 'Gobble']",Music,0.59991467,Speech,0.08535732,Rapping,0.028729474,Turkey,0.023420462,Hip hop music,0.020181643
+7uifiqanNoM,"['Bird', 'Turkey', 'Bird vocalization, bird call, bird song', 'Fowl', 'Gobble']",Animal,0.378007,Speech,0.20467095,Bird,0.18831676,Wild animals,0.18765827,"Livestock, farm animals, working animals",0.1359838
+WJIrkvEq4EI,"['Music', 'Mouse', 'Techno']",Music,0.9231164,Scratching (performance technique),0.11440321,Hip hop music,0.09665819,Electronic music,0.037529442,Musical instrument,0.02787852
+AG7Zm7D4JIE,"['Mouse', 'Speech']",Speech,0.5866436,Cap gun,0.07036218,"Gunshot, gunfire",0.06847553,Explosion,0.06337198,"Inside, small room",0.031740297
+0qDs_aC0LwI,"['Music', 'Mouse']",Music,0.9195112,Scratching (performance technique),0.20017278,Electronic music,0.08498569,Drum and bass,0.057196386,Musical instrument,0.045775957
+Y4Qhe9KnnEI,"['Music', 'Mouse']",Music,0.5608371,Speech,0.069797836,Scary music,0.069625914,Ambient music,0.024743382,Soundtrack music,0.021459933
+LI-UBG1Z77o,"['Croak', 'Frog']",Frog,0.6905989,Wild animals,0.62399554,Animal,0.5743984,Croak,0.35950738,"Burping, eructation",0.08148705
+FGPx2E089VU,"['Croak', 'Frog']",Speech,0.53918105,Animal,0.040922668,"Livestock, farm animals, working animals",0.019928075,Television,0.018029978,Pig,0.015270603
+FEONPM3mckU,"['Croak', 'Frog']",Frog,0.4640603,Animal,0.4388667,Wild animals,0.37363556,Croak,0.256773,Speech,0.23367748
+6IHkgMUVMnQ,"['Bird', 'Bird vocalization, bird call, bird song', 'Hoot', 'Owl']",Silence,1.0,Speech,8.634563e-08,Music,7.0664346e-15,"Inside, small room",2.0753673e-27,"Narration, monologue",9.703763e-30
+CpNfxbqRDUA,"['Bird', 'Bird vocalization, bird call, bird song', 'Hoot', 'Owl']",Wild animals,0.08711943,Animal,0.08331368,Sound effect,0.083195046,Speech,0.07370267,White noise,0.067245506
+SJVuopldMyU,"['Bird', 'Bird vocalization, bird call, bird song', 'Chirp, tweet', 'Hoot', 'Owl']",Animal,0.45620593,Wild animals,0.3509983,Bird,0.30470437,"Outside, rural or natural",0.1645787,"Bird vocalization, bird call, bird song",0.1530262
+Vp4lOXVBQzQ,"['Hoot', 'Owl']",Wild animals,0.44833714,Bird,0.426344,Animal,0.38883388,Owl,0.37647468,Hoot,0.35572347
+uR0W234PpW4,"['Hoot', 'Owl']",Speech,0.87384796,"Inside, large room or hall",0.039306454,"Inside, public space",0.03341407,Children playing,0.03072304,Animal,0.01277576
+6IHkgMUVMnQ,"['Bird', 'Bird vocalization, bird call, bird song', 'Hoot', 'Owl']",Silence,1.0,Speech,8.634563e-08,Music,7.0664346e-15,"Inside, small room",2.0753673e-27,"Narration, monologue",9.703763e-30
+fPFpRsKbzfU,"['Bird', 'Bird vocalization, bird call, bird song', 'Hoot', 'Owl']",Dog,0.1604622,"Domestic animals, pets",0.15048355,Speech,0.14428002,Animal,0.12603678,"Inside, small room",0.10821898
+1Uj_ulATth0,"['Bird', 'Bird vocalization, bird call, bird song', 'Chirp, tweet', 'Waterfall']",Animal,0.3084954,Wild animals,0.30223578,Bird,0.29871607,Environmental noise,0.293447,"Bird vocalization, bird call, bird song",0.2639004
+a_ruWnMK1MA,"['Bird', 'Bird vocalization, bird call, bird song', 'Insect', 'Chirp, tweet', 'Cricket']",Insect,0.20871317,"Outside, rural or natural",0.19152084,Animal,0.18747045,Speech,0.17979299,Cricket,0.16212894

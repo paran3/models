@@ -1,0 +1,25 @@
+label,total,exist_total,count,rate
+Howl,5,3,2,0.667
+Horse,5,4,3,0.75
+Pig,5,3,1,0.333
+Goat,5,4,1,0.25
+Sheep,5,4,3,0.75
+Fowl,5,5,4,0.8
+Turkey,5,5,1,0.2
+Mouse,5,5,0,0.0
+Frog,5,5,3,0.6
+Owl,5,3,1,0.333
+Bird,5,5,2,0.4
+Squawk,5,1,0,0.0
+Animal,5,4,4,1.0
+Meow,5,5,3,0.6
+"Chicken, rooster",5,4,3,0.75
+Gobble,5,5,1,0.2
+"Livestock, farm animals, working animals",5,5,3,0.6
+Wild animals,5,1,0,0.0
+Roar,5,4,1,0.25
+Snake,5,1,0,0.0
+Mosquito,5,4,1,0.25
+Buzz,5,5,0,0.0
+Insect,5,4,3,0.75
+Purr,5,5,4,0.8

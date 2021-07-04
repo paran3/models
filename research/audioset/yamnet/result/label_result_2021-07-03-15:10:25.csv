@@ -1,0 +1,12 @@
+label,total,exist_total,count,rate
+Howl,5,5,5,1.0
+Horse,5,5,1,0.2
+Pig,5,3,0,0.0
+Goat,5,5,1,0.2
+Sheep,5,5,2,0.4
+Fowl,5,3,2,0.667
+Turkey,5,5,4,0.8
+Mouse,5,4,0,0.0
+Frog,5,3,2,0.667
+Owl,5,5,1,0.2
+Bird,5,4,1,0.25
