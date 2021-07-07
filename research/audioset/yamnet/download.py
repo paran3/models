@@ -60,7 +60,7 @@ def youtube_downloader(id, start_time, idx):
 def check_dir(path):
     if not os.path.isdir(path):
         os.makedirs(path)
-    if not os.path.isdir(path+'error/'):
+    if not os.path.isdir(path + 'error/'):
         os.makedirs(path + 'error/')
 
 

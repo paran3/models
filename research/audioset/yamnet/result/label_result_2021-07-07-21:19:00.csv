@@ -1,0 +1,35 @@
+label,total,exist_total,count,rate
+Howl,1,1,0,0.0
+Horse,1,1,0,0.0
+Pig,1,1,0,0.0
+Goat,1,1,0,0.0
+Sheep,1,1,0,0.0
+Fowl,1,1,1,1.0
+Turkey,1,1,1,1.0
+Mouse,1,1,0,0.0
+Frog,1,1,1,1.0
+Owl,1,1,0,0.0
+Bird,1,1,0,0.0
+Squawk,1,1,0,0.0
+Animal,1,1,1,1.0
+Meow,1,1,0,0.0
+"Chicken, rooster",1,0,0,0.0
+Gobble,1,1,0,0.0
+Wild animals,1,1,1,1.0
+Roar,1,0,0,0.0
+Snake,1,1,1,1.0
+Mosquito,1,1,0,0.0
+Buzz,1,1,0,0.0
+Insect,1,1,1,1.0
+Purr,1,1,1,1.0
+Duck,1,1,0,0.0
+Oink,1,1,0,0.0
+Bleat,1,1,0,0.0
+Goose,1,1,1,1.0
+Moo,1,1,1,1.0
+Mouse,1,1,0,0.0
+Hoot,1,1,0,0.0
+Croak,1,0,0,0.0
+Hiss,1,1,0,0.0
+Yip,1,1,0,0.0
+Bark,1,0,0,0.0

@@ -23,7 +23,8 @@ rate_count = dict()
 
 label_list = ['Howl', 'Horse', 'Pig', 'Goat', 'Sheep', 'Fowl', 'Turkey', 'Mouse', 'Frog', 'Owl', 'Bird', 'Squawk',
               'Animal', 'Meow', 'Chicken, rooster', 'Gobble', 'Wild animals', 'Roar', 'Snake', 'Mosquito', 'Buzz',
-              'Insect', 'Purr', 'Duck', 'Oink', 'Bleat', 'Goose', 'Moo', 'Mouse', 'Hoot', 'Croak', 'Hiss', 'Yip', 'Bark']
+              'Insect', 'Purr', 'Duck', 'Oink', 'Bleat', 'Goose', 'Moo', 'Mouse', 'Hoot', 'Croak', 'Hiss', 'Yip',
+              'Bark']
 
 
 def main(label_names, video_list_size=5):

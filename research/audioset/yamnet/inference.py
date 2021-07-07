@@ -28,38 +28,37 @@ import yamnet as yamnet_model
 
 
 def main(argv):
-  assert argv, 'Usage: inference.py <wav file> <wav file> ...'
+    assert argv, 'Usage: inference.py <wav file> <wav file> ...'
 
-  params = yamnet_params.Params()
-  yamnet = yamnet_model.yamnet_frames_model(params)
-  yamnet.load_weights('yamnet.h5')
-  yamnet_classes = yamnet_model.class_names('yamnet_class_map.csv')
+    params = yamnet_params.Params()
+    yamnet = yamnet_model.yamnet_frames_model(params)
+    yamnet.load_weights('yamnet.h5')
+    yamnet_classes = yamnet_model.class_names('yamnet_class_map.csv')
 
-  for file_name in argv:
-    # Decode the WAV file.
-    wav_data, sr = sf.read(file_name, dtype=np.int16)
-    assert wav_data.dtype == np.int16, 'Bad sample type: %r' % wav_data.dtype
-    waveform = wav_data / 32768.0  # Convert to [-1.0, +1.0]
-    waveform = waveform.astype('float32')
+    for file_name in argv:
+        # Decode the WAV file.
+        wav_data, sr = sf.read(file_name, dtype=np.int16)
+        assert wav_data.dtype == np.int16, 'Bad sample type: %r' % wav_data.dtype
+        waveform = wav_data / 32768.0  # Convert to [-1.0, +1.0]
+        waveform = waveform.astype('float32')
 
-    # Convert to mono and the sample rate expected by YAMNet.
-    if len(waveform.shape) > 1:
-      waveform = np.mean(waveform, axis=1)
-    if sr != params.sample_rate:
-      waveform = resampy.resample(waveform, sr, params.sample_rate)
+        # Convert to mono and the sample rate expected by YAMNet.
+        if len(waveform.shape) > 1:
+            waveform = np.mean(waveform, axis=1)
+        if sr != params.sample_rate:
+            waveform = resampy.resample(waveform, sr, params.sample_rate)
 
-    # Predict YAMNet classes.
-    scores, embeddings, spectrogram = yamnet(waveform)
-    # Scores is a matrix of (time_frames, num_classes) classifier scores.
-    # Average them along time to get an overall classifier output for the clip.
-    prediction = np.mean(scores, axis=0)
-    # Report the highest-scoring classes and their scores.
-    top5_i = np.argsort(prediction)[::-1][:5]
-    print(file_name, ':\n' +
-          '\n'.join('  {:12s}: {:.3f}'.format(yamnet_classes[i], prediction[i])
-                    for i in top5_i))
+        # Predict YAMNet classes.
+        scores, embeddings, spectrogram = yamnet(waveform)
+        # Scores is a matrix of (time_frames, num_classes) classifier scores.
+        # Average them along time to get an overall classifier output for the clip.
+        prediction = np.mean(scores, axis=0)
+        # Report the highest-scoring classes and their scores.
+        top5_i = np.argsort(prediction)[::-1][:5]
+        print(file_name, ':\n' +
+              '\n'.join('  {:12s}: {:.3f}'.format(yamnet_classes[i], prediction[i])
+                        for i in top5_i))
 
 
 if __name__ == '__main__':
-  main(sys.argv[1:])
-
+    main(sys.argv[1:])
